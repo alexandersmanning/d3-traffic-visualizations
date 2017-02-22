@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="./lib/bundle.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./assets/style/style.css">
+	<title>Different Displays of Spark Data</title>
+</head>
+<body>
+	<h1>D3 Displays of Spark Data</h1>
+	<content class="data-group">
+		<h2>Total Bytes Transferred to IP Over Time</h2>
+		<p class="description">This displays a time series of the time.json file, with a "scrub" at the bottom, so that the user can drag the bars and concentrate on a specific section.</p>
+		<svg id="time-plot"></svg>
+	</content>
+
+	<content class="data-group">
+		<h2>Traffic by Byte Size</h2>
+		<p class="description">This displays a pie chart for the traffic_bytes.json file, in which the amount of traffic is grouped by byte size, to give a overview of the number of requests per size. The scale is logorithmic given the dispersion of the data.</p>
+
+		<p class="description">You can click on different pieces of the pie to see a histogram of the request size breakdown per group</p>
+		<svg id="pie-plot"></svg>
+
+		<content class="data-group">
+			<h3>Histogram of Traffic Per Byte Size</h2>
+			<svg id="bar-plot"></svg>
+	</content>
+	</content>
+</body>
+</html>

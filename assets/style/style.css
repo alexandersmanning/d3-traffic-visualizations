@@ -1,0 +1,85 @@
+/*reset*/
+h1, h2, h3, body {
+	text-align: center;
+	font-family: 'Lato', sans-serif;
+}
+
+.data-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.description {
+	width: 700px;
+}
+
+/*time plot style*/
+.line {
+  fill: none;
+  stroke-width: 6px;
+  clip-path: url(#clip);
+}
+
+.ip {
+  opacity: 0.3;
+}
+
+.ip:hover {
+  opacity: 1;
+}
+
+.zoom {
+	/*display: none;*/
+	/*z-index: :-100;*/
+  cursor: move;
+  fill: none;
+  pointer-events: none;
+}
+
+.byte-point {
+	clip-path: url(#clip);
+}
+
+.brush {
+	shape-rendering: crispEdges;
+}
+
+.brush > .selection {
+	fill: lightblue;
+	stroke: grey;
+	/*fill-opacity: .125;*/
+}
+
+.brush > .handle {
+	stroke: grey;
+	fill: lightgrey;
+}
+
+
+/*pie chart style*/
+.arc {
+	opacity: 0.5;
+	cursor: pointer;
+}
+
+.byte-count {
+	opacity: 0;
+}
+
+.arc:hover {
+	opacity: 1;
+}
+
+.arc:hover>.byte-count {
+	opacity: 1;
+}
+
+.arc.selected {
+	opacity: 1;
+	cursor: default;
+}
+
+.arc.selected>.byte-count {
+	opacity: 1;
+}
